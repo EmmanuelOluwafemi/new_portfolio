@@ -57,9 +57,9 @@ const MainLayout = ({ children }) => {
 
                     <div className="about">
                         <img src={avatar} alt="my face" />
-                        <a href="https://github.com"><FaGithub className="icons" /> Github</a>
-                        <a href="https://github.com"><FaTwitter className="icons" /> Twitter</a>
-                        <a href="https://github.com"><FaLinkedin className="icons" /> Linkedin</a>
+                        <a href="https://github.com/EmmanuelOluwafemi"><FaGithub className="icons" /> Github</a>
+                        <a href="https://twitter.com/emaz4me"><FaTwitter className="icons" /> Twitter</a>
+                        <a href="https://www.linkedin.com/in/yusuf-emmanuel-b897b1168/"><FaLinkedin className="icons" /> Linkedin</a>
                     </div>
                 </div>
             </div>
