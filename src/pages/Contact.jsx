@@ -35,7 +35,7 @@ const StyledContact = Styled.form`
     width: 100%;
     min-height: 400px;
     max-width: 520px;
-    background: #09090A;
+    background: #16161a;
     padding: 2rem 3rem;
 
     @media (max-width: 768px) {
@@ -78,9 +78,13 @@ const StyledContact = Styled.form`
         height: 40px;
         background: none;
         outline: none;
-        border: 1px solid rgba(255, 255, 255, .4);
+        border: none;
+        background: #EF3E07;
         border-radius: 4px;
         cursor: pointer;
+        color: #fff;
+        font-weight: 700;
+        font-size: 1rem;
         
         &:hover {
             background: rgba(255, 255, 255, .2);

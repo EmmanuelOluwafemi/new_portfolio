@@ -291,7 +291,7 @@ const StyledMobileLayout = Styled.section`
 
     .buttomNav {
         position: fixed;
-        bottom: 1%;
+        bottom: .5%;
         left: 4%;
         right: 4%;
         height: 68px;

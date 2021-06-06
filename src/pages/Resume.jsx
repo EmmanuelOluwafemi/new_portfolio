@@ -71,7 +71,7 @@ const StyledResume = Styled.div`
     min-height: 95%;
     border-radius: .5rem;
     padding: 2rem;
-    background: #09090A;
+    background: #16161a;
     max-width: 530px;
 
     @media (max-width: 768px) {
