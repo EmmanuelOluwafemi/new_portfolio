@@ -5,19 +5,22 @@ import Styled from 'styled-components';
 import { AiFillEye } from 'react-icons/ai';
 import { DiGitBranch } from 'react-icons/di';
 
-const Card = () => {
+const Card = ({ title, tech, desc, link, github }) => {
     return (
         <StyledCard>
             <div className="title">
-                <h4>Movie App</h4>
-                <p>React + Styled-Components + MovieDb Api</p>
+                <h4>{title}</h4>
+                <p>{tech}</p>
             </div>
 
-            <p>An App Where The User Can see Latest Movies and More Info About Them.</p>
+            <p>{desc}</p>
 
             <div className="links">
-                <a href="https://github.com"><AiFillEye className="icons" /> Live</a>
-                <a href="https://github.com"><DiGitBranch className="icons" /> Code</a>
+                <a href={link}><AiFillEye className="icons" /> Live</a>
+                {
+                    github && 
+                    <a href={github}><DiGitBranch className="icons" /> Code</a>
+                }
             </div>
         </StyledCard>
     )
@@ -27,7 +30,7 @@ export default Card;
 
 const StyledCard = Styled.div`
     width: 100%;
-    background: #16161a;
+    background: rgb(9, 9, 10);
     border-radius: 4px;
     padding: 1.5rem;
     height: 264px;
@@ -37,14 +40,14 @@ const StyledCard = Styled.div`
 
     .title {
         h4 {
-            font-size: 1rem;
+            font-size: 1.3rem;
             font-weight: 700;
             color: #fff;
         }
     }
 
     p {
-        font-size: .75rem;
+        font-size: .85rem;
         font-weight: 400;
         color: rgba(255, 255, 255, .8);
         line-height: 1.7;
@@ -54,6 +57,7 @@ const StyledCard = Styled.div`
     .links {
         display: flex;
         align-items: center;
+        justify-content: space-between;
 
         a {
             color: #fff;

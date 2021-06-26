@@ -18,3 +18,29 @@ body {
   background-size: cover;
   background-position: right;
 }
+
+@media (max-width: 768px) {
+  body {
+    background-size: contain;
+  }
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #000;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #32323a;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #16161a;
+}

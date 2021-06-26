@@ -2,11 +2,15 @@ import React from 'react';
 
 import Styled from 'styled-components';
 import MainLayout from '../layouts/MainLayout';
+import { Link } from 'react-router-dom';
+
+import { GrCloudDownload } from 'react-icons/gr';
 
 const Resume = () => {
     return (
         <MainLayout>
             <StyledResume>
+                <a className="download" href="https://google.com"><GrCloudDownload className="icon" /> Download</a>
                 <h1>Emmanuel Yusuf</h1>
                 <p>Frontend Developer</p>
 
@@ -22,10 +26,7 @@ const Resume = () => {
                 </div>
 
                 <div className="textContent">
-                    Frontend developer, passionate and dedicated in bringing ideas from 
-                    pixels to live scalable products. I develop responsive applications 
-                    with user experience as top priority. I’m always ready to adapt 
-                    according to project specifications irrespective of stack.
+                    Html, Css, Javascript, React, Redux, Styled-components, Nextjs, Gatsby, Gsap, Context api, Sass, Bootstrap, GraphQl, TailwindCss
                 </div>
 
                 {/* Start Experience */}
@@ -34,31 +35,63 @@ const Resume = () => {
                 </div>
                 
                 <div className="heading">
-                    Hng Internship
+                    Perxels Design School - Frontend Developer
                 </div>
                 <div className="subHeading">
-                    May 2020
+                    April 2021 - Present
                 </div>
                 <div className="textContent">
-                    Frontend developer, passionate and dedicated in bringing ideas from 
-                    pixels to live scalable products. I develop responsive applications 
-                    with user experience as top priority. I’m always ready to adapt 
-                    according to project specifications irrespective of stack.
+                    I worked with designers to covert ready-made UIs into usable code <br />
+
+                    <ul>
+                        <li>Converted Figma UI designs into pixel-perfect web implementation.</li>
+                        <li>Worked closely with designers to deliver pixel perfect UIs with responsive web design principles.</li>
+                        <li>Made use of tools like Trello for task management and feedback.</li>
+                    </ul>
+                </div>
+
+                {/* Studione */}
+                <div className="heading">
+                    Studione Digital Agency - Frontend Developer
+                </div>
+                <div className="subHeading">
+                    June 2020 - November 2020
+                </div>
+                <div className="textContent">
+                    I worked with a team of backend developer to create usable web pages for startups <br />
+
+                    <ul>
+                        <li>Converted Figma UI designs into pixel-perfect web implementation.</li>
+                        <li>Worked closely with designers to deliver pixel perfect UIs with responsive web design principles.</li>
+                        <li>Made use of tools like Trello for task management and feedback.</li>
+                    </ul>
                 </div>
 
                 <div className="heading">
-                    Hng Internship
+                    Hng Internship - Frontend Developer (Intern)
                 </div>
                 <div className="subHeading">
-                    May 2020
+                    May 2020 - July 2020
                 </div>
                 <div className="textContent">
-                    Frontend developer, passionate and dedicated in bringing ideas from 
-                    pixels to live scalable products. I develop responsive applications 
-                    with user experience as top priority. I’m always ready to adapt 
-                    according to project specifications irrespective of stack.
+                    I contributed in developing user interfaces for quite a number of products within three months while learning new skills.
+
+                    <ul>
+                        <li>Worked with team of frontend developer to create envanto element templates</li>
+                        <li>Work with backend developer to create projects based on task given</li>
+                    </ul>
                 </div>
                 {/* End Experience */}
+
+                {/* Work */}
+                <div className="title">
+                    Projects   . . . . . . . . . . . . . . . . . . . . .
+                </div>
+
+                <div className="textContent">
+                    Links to my projects can be found on <Link to="/work">Emaz.com/work</Link>
+                </div>
+                {/* End Work */}
             </StyledResume>
         </MainLayout>
     )
@@ -71,16 +104,46 @@ const StyledResume = Styled.div`
     min-height: 95%;
     border-radius: .5rem;
     padding: 2rem;
-    background: #16161a;
-    max-width: 530px;
+    background: rgb(9, 9, 10);
+    position: relative;
 
     @media (max-width: 768px) {
         padding: 2rem 1rem;
         padding-bottom: 6rem;
     }
 
+    a.download {
+        position: absolute;
+        top: 2rem;
+        right: 1rem;
+        display: flex;
+        align-items: center;
+        font-size: 1.1rem;
+        color: #fff;
+        font-weight: 600;
+        text-decoration: none;
+
+        @media (max-width: 768px) {
+            top: 1rem;
+        }
+
+        .icon {
+            font-size: 1.25rem;
+            fill: #fff;
+            margin-right: 1rem;
+
+            @media (max-width: 768px) {
+                margin-right: .5rem;
+            }
+
+            path {
+                stroke: #fff;
+            }
+        }
+    }
+
     h1 {
-        font-size: 2rem;
+        font-size: 2.4rem;
         font-weight: 700;
         color: #fff;
 
@@ -91,34 +154,58 @@ const StyledResume = Styled.div`
 
     p {
         font-size: 1rem;
-        color: rgba(255, 255, 255, .8);
+        color: rgba(255, 255, 255);
         font-weight: 400;
         margin-top: .5rem;
     }
 
     .textContent {
-        font-size: .8rem;
-        color: rgba(255, 255, 255, .6);
+        font-size: 1rem;
+        line-height: 1.5;
+        color: rgba(255, 255, 255, .7);
         font-weight: 300;
-        max-width: 500px;
         margin-top: 1.5rem;
+
+        ul {
+            margin: 2rem 0;
+            margin-left: 1rem;
+
+            li {
+                margin-bottom: 1rem;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        a {
+            font-size: 1rem;
+            color: #fff;
+            font-weight: 600;
+            text-decoration: none;
+        }
     }
 
     .title {
-        font-size: 1rem;
-        color: rgba(255, 255, 255, .8);
+        font-size: 1.15rem;
+        color: rgba(255, 255, 255);
         font-weight: 400;
         max-width: 500px;
         margin-top: 1.8rem;
     }
 
     .heading {
-        font-size: 1rem;
+        font-size: 1.2rem;
         color: rgba(255, 255, 255, 1);
-        font-weight: 400;
+        font-weight: 600;
         max-width: 500px;
-        margin-top: 1rem;
+        margin-top: 3rem;
         text-transform: uppercase;
+
+        &:first-child {
+            margin-top: 1rem;
+        }
     }
 
     .subHeading {

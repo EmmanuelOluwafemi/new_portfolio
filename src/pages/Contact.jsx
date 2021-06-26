@@ -1,4 +1,6 @@
-import React from 'react';
+import React, {useState} from 'react';
+
+import emailjs from 'emailjs-com';
 
 // MainLayout to show the layout structure
 import MainLayout from '../layouts/MainLayout';
@@ -6,24 +8,56 @@ import MainLayout from '../layouts/MainLayout';
 // import styled components to add your style
 import Styled from 'styled-components';
 
+import Modal from '../components/Modal';
+
+import { Beetle as Button } from 'react-button-loaders'
+
 const Contact = () => {
+
+    const [sendState, setSendState] = useState('')
+    const [modal, setModal] = useState(false)
+
+    const sendForm = (e) => {
+        e.preventDefault()
+
+        setSendState('loading')
+
+        emailjs.sendForm('service_gasb4xu', 'template_b3nq9d6', e.target ,'user_G8lO7Vdi53F63s21ItAdP')
+            .then((res) => {
+                console.log(res.text)
+                setSendState('finished')
+                setModal(!modal)
+            }, (error) => {
+                console.log(error.text)
+                setSendState('finished')
+            })
+    }
+
+    const handleModal = () => {
+        setModal(!modal)
+    }
+
     return (
         <MainLayout>
-            <StyledContact>
+            {
+                modal &&
+                <Modal func={handleModal} />
+            }
+            <StyledContact onSubmit={sendForm}>
                 <div className="inputGroup">
                     <label>Your Name *</label>
-                    <input type="text" />
+                    <input type="text" name="from_name" required />
                 </div>
                 <div className="inputGroup">
                     <label>Email *</label>
-                    <input type="email" />
+                    <input type="email" name="email" required />
                 </div>
                 <div className="inputGroup">
                     <label>Message *</label>
-                    <textarea></textarea>
+                    <textarea name="message" required ></textarea>
                 </div>
 
-                <button type="submit">Submit</button>
+                <Button type='submit' state={sendState}>Submit</Button>
             </StyledContact>
         </MainLayout>
     )
@@ -34,13 +68,13 @@ export default Contact;
 const StyledContact = Styled.form`
     width: 100%;
     min-height: 400px;
-    max-width: 520px;
-    background: #16161a;
-    padding: 2rem 3rem;
+    background: rgb(9, 9, 10);
+    padding: 4rem 3rem;
 
     @media (max-width: 768px) {
         padding: 2rem 1.5rem;
         padding-bottom: 6rem;
+        width: 100%;
     }
 
     .inputGroup {

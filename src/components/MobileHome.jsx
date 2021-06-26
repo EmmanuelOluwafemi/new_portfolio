@@ -16,9 +16,12 @@ const MobileHome = ({ isMobile }) => {
     return (
         <StyledMobile className={isMobile ? 'isMobile' : ''}>
             <h4><span>Hello,</span> I’m <br /> Emmanuel Yusuf. </h4>
-            <p>Volutpat proin enim hac sit. Eu amet duis vitae 
-            donec ac fames tristique eget. Dui magna non ullamcorper 
-            sit eget. Leo interdum in sit a enim quisque.</p>
+            <p>
+                Frontend developer, passionate and dedicated in bringing ideas from 
+                pixels to live scalable products. I develop responsive applications 
+                with user experience as top priority. I’m always ready to adapt 
+                according to project specifications irrespective of stack.
+            </p>
 
             <Link className="cta" to="/contact">Let's Talk</Link>
 
@@ -88,6 +91,12 @@ const StyledMobile = Styled.div`
         color: #EF3E07;
         cursor: pointer;
         font-weight: 700;
+
+        &:hover {
+            background: #EF3E07;
+            color: #fff;
+            transition: .3s all ease-in-out;
+        }
     }
 
     .contact {

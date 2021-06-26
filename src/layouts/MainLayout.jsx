@@ -46,11 +46,12 @@ const MainLayout = ({ children }) => {
                 <div className="mainContent">
                     <div className="minContent">
                         <h1><span>Hello,</span> I’m Emmanuel Yusuf. </h1>
-                        <p>Volutpat proin enim hac sit. Eu amet duis vitae donec ac 
-                        fames tristique eget. Dui magna non ullamcorper sit eget. 
-                        Leo interdum in sit a enim quisque imperdiet tortor, vitae. 
-                        Egestas posuere vel aliquet cursus varius 
-                        venenatis justo, nibh.</p>
+                        <p>
+                            Frontend developer, passionate and dedicated in bringing ideas from 
+                            pixels to live scalable products. I develop responsive applications 
+                            with user experience as top priority. I’m always ready to adapt 
+                            according to project specifications irrespective of stack.
+                        </p>
 
                         <Link to="/contact">Let's Talk</Link>
                     </div>
@@ -211,6 +212,7 @@ const StyledLayout = Styled.section`
 
         .minContent {
             max-width: 440px;
+            margin-top: 2rem;
 
             h1 {
                 color: #fff;
@@ -227,7 +229,7 @@ const StyledLayout = Styled.section`
                 color: rgba(255, 255, 255, 0.8);
                 font-weight: 300;
                 line-height: 1.6;
-                margin-top: 2rem;
+                margin-top: 1rem;
             }
 
             a {
@@ -244,6 +246,12 @@ const StyledLayout = Styled.section`
                 color: #EF3E07;
                 cursor: pointer;
                 font-weight: 700;
+
+                &:hover {
+                    background: #EF3E07;
+                    color: #fff;
+                    transition: .3s all ease-in-out;
+                }
             }
         }
 
@@ -280,10 +288,15 @@ const StyledLayout = Styled.section`
 
 const StyledMobileLayout = Styled.section`
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     padding: 3rem 6%;
     padding-bottom: 6rem;
     background: rgba(0,0,0, .8);
+    display: flex;
+
+    .content {
+        width: 100%;
+    }
 
     @media (min-width: 768px) {
         display: none;
@@ -291,14 +304,13 @@ const StyledMobileLayout = Styled.section`
 
     .buttomNav {
         position: fixed;
-        bottom: .5%;
-        left: 4%;
-        right: 4%;
+        bottom: 0;
+        left: 0;
+        right: 0;
         height: 68px;
         background: #000;
         padding: .6rem 1rem;
-        border-radius: 8px;
-        border: 1px solid hsla(14, 95%, 48%, .4);
+        border-top: 1px solid hsla(14, 95%, 48%, .4);
         /* box-shadow: 0px 0px 24px rgba(255, 255, 255, 0.1); */
         display: flex;
         justify-content: space-between;
