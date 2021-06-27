@@ -16,10 +16,10 @@ const Card = ({ title, tech, desc, link, github }) => {
             <p>{desc}</p>
 
             <div className="links">
-                <a href={link}><AiFillEye className="icons" /> Live</a>
+                <a href={link} target="_blank" rel="noopener noreferrer"><AiFillEye className="icons" /> Live</a>
                 {
                     github && 
-                    <a href={github}><DiGitBranch className="icons" /> Code</a>
+                    <a href={github} target="_blank" rel="noopener noreferrer"><DiGitBranch className="icons" /> Code</a>
                 }
             </div>
         </StyledCard>
