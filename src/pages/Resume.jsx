@@ -10,7 +10,7 @@ const Resume = () => {
     return (
         <MainLayout>
             <StyledResume>
-                <a className="download" href="https://drive.google.com/file/d/1h_OkZfKuHgv0qpDjdfaVhphu50oi5U48/view?usp=sharing" target="_blank" rel="noopener noreferrer"><GrCloudDownload className="icon" /> Download</a>
+                <a className="download" href="https://docs.google.com/document/d/1uSHgQeg8Id1kge3iiurGVI6qTISplFS9z3LLT4n_BrM/edit?usp=sharing" target="_blank" rel="noopener noreferrer"><GrCloudDownload className="icon" /> Download</a>
                 <h1>Emmanuel Yusuf</h1>
                 <p>Frontend Developer</p>
 
