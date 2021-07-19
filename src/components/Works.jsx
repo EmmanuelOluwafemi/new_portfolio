@@ -5,6 +5,13 @@ import Card from './Card';
 
 const data = [
     {
+        title: 'Google Docs Clone',
+        tech: 'Nextjs + TailwindCss + Firebase + Next-auth',
+        desc: 'Created a replica of Google docs for learning purpose.',
+        link: 'https://google-docs-clone-sandy.vercel.app/',
+        github: 'https://github.com/EmmanuelOluwafemi/google-docs-clone.git'
+    },
+    {
         title: 'SophisticatedDev Portfolio',
         tech: 'React + Styled-components + Gsap + framer-motion',
         desc: 'Portfolio Implementation for Sophisticated dev',

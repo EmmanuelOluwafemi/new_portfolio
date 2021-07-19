@@ -47,10 +47,9 @@ const MainLayout = ({ children }) => {
                     <div className="minContent">
                         <h1><span>Hello,</span> I’m Emmanuel Yusuf. </h1>
                         <p>
-                            Frontend developer, passionate and dedicated in bringing ideas from 
-                            pixels to live scalable products. I develop responsive applications 
-                            with user experience as top priority. I’m always ready to adapt 
-                            according to project specifications irrespective of stack.
+                            Years of experience working emphasizing creating a better interface for the user, 
+                            implementing a pixel perfect design and meeting business needs. Giving the user 
+                            the comfort and best experience they deserve is what I do.
                         </p>
 
                         <Link to="/contact">Let's Talk</Link>

@@ -43,7 +43,7 @@ const Resume = () => {
 
                     <ul>
                         <li>Converted Figma UI designs into pixel-perfect web implementation.</li>
-                        <li>Worked closely with designers to deliver pixel perfect UIs with responsive web design principles.</li>
+                        <li>Worked closely with designers to deliver pixel-perfect UIs with responsive web design principles.</li>
                         <li>Made use of tools like Trello for task management and feedback.</li>
                     </ul>
                 </div>
@@ -56,12 +56,12 @@ const Resume = () => {
                     June 2020 - November 2020
                 </div>
                 <div className="textContent">
-                    I worked with a team of backend developer to create usable web pages for startups <br />
+                    I worked with a team of a backend developers to create usable web pages for startups <br />
 
                     <ul>
                         <li>Converted Figma UI designs into pixel-perfect web implementation.</li>
-                        <li>Worked closely with designers to deliver pixel perfect UIs with responsive web design principles.</li>
-                        <li>Made use of tools like Trello for task management and feedback.</li>
+                        <li>Worked closely with designers to deliver pixel-perfect UIs with responsive web design principles.</li>
+                        <li>Working with backend developers by consuming restful API's</li>
                     </ul>
                 </div>
 
@@ -72,11 +72,11 @@ const Resume = () => {
                     May 2020 - July 2020
                 </div>
                 <div className="textContent">
-                    I contributed in developing user interfaces for quite a number of products within three months while learning new skills.
+                    I contributed to developing user interfaces for quite a several products within three months while learning new skills.
 
                     <ul>
-                        <li>Worked with team of frontend developer to create envanto element templates</li>
-                        <li>Work with backend developer to create projects based on task given</li>
+                        <li>Worked with a team of frontend developers to create envanto element templates</li>
+                        <li>Work with backend developers to create projects based on tasks given.</li>
                     </ul>
                 </div>
                 {/* End Experience */}
