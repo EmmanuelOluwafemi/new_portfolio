@@ -17,10 +17,10 @@ const MobileHome = ({ isMobile }) => {
         <StyledMobile className={isMobile ? 'isMobile' : ''}>
             <h4><span>Hello,</span> I’m <br /> Emmanuel Yusuf. </h4>
             <p>
-                Frontend developer, passionate and dedicated in bringing ideas from 
-                pixels to live scalable products. I develop responsive applications 
-                with user experience as top priority. I’m always ready to adapt 
-                according to project specifications irrespective of stack.
+                Frontend Developer with a demonstrated history of working in the design industry. 
+                Skilled in React Js, Javascript, Html, CSS, Redux, Firebase, NextJs and Figma. 
+                With a keen interest in the User interface and creating User a better experience 
+                for the user.
             </p>
 
             <Link className="cta" to="/contact">Let's Talk</Link>

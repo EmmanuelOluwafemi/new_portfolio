@@ -47,9 +47,10 @@ const MainLayout = ({ children }) => {
                     <div className="minContent">
                         <h1><span>Hello,</span> I’m Emmanuel Yusuf. </h1>
                         <p>
-                            Years of experience working emphasizing creating a better interface for the user, 
-                            implementing a pixel perfect design and meeting business needs. Giving the user 
-                            the comfort and best experience they deserve is what I do.
+                            Frontend Developer with a demonstrated history of working in the design 
+                            industry. Skilled in React Js, Javascript, Html, CSS, Redux, Firebase, 
+                            NextJs and Figma. With a keen interest in the User interface and creating 
+                            User a better experience for the user.
                         </p>
 
                         <Link to="/contact">Let's Talk</Link>
