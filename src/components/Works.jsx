@@ -7,7 +7,7 @@ const data = [
     {
         title: 'Hopla Careers',
         tech: 'React + Styled-components + Redux',
-        desc: 'Career platform to link talent to recruiters.',
+        desc: 'Recruitment platform.',
         link: 'https://www.hoplacareers.online/',
     },
     {
