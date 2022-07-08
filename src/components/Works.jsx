@@ -5,6 +5,12 @@ import Card from './Card';
 
 const data = [
     {
+        title: 'Hopla Careers',
+        tech: 'React + Styled-components + Redux',
+        desc: 'Career platform to link talent to recruiters.',
+        link: 'https://www.hoplacareers.online/',
+    },
+    {
         title: 'Google Docs Clone',
         tech: 'Nextjs + TailwindCss + Firebase + Next-auth',
         desc: 'Created a replica of Google docs for learning purpose.',
@@ -24,23 +30,11 @@ const data = [
         link: 'https://www.dashouts.com'
     },
     {
-        title: 'Startar',
-        tech: 'React + Styled-components + NodeJS + ExpressJS + MongoDB',
-        desc: 'Tech platform for university freelancers.',
-        link: 'https://startar.vercel.app/',
-    },
-    {
         title: 'Movie App',
         tech: 'React + Context Api + Styled-components',
         desc: 'An app that shows the list of latest movies, there rating, actors and other informations',
         link: 'https://slimmovies.netlify.app/',
         github: 'https://github.com/EmmanuelOluwafemi/movieApp'
-    },
-    {
-        title: 'CheksNg',
-        tech: 'React + Styled-components + Context Api',
-        desc: 'Online Market place',
-        link: 'https://cheks.ng'
     },
     {
         title: 'DNF',
