@@ -77,7 +77,7 @@ const StyledResume = Styled.div`
     min-height: 95%;
     border-radius: .5rem;
     padding: 2rem;
-    background: rgb(9, 9, 10);
+    background: rgb(16, 16, 19);
     position: relative;
 
     @media (max-width: 768px) {
