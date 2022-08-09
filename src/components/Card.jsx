@@ -30,7 +30,7 @@ export default Card;
 
 const StyledCard = Styled.div`
     width: 100%;
-    background: rgb(9, 9, 10);
+    background: rgb(16 16 19);
     border-radius: 4px;
     padding: 1.5rem;
     height: 264px;

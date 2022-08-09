@@ -5,85 +5,60 @@ import MainLayout from '../layouts/MainLayout';
 import { Link } from 'react-router-dom';
 
 import { GrCloudDownload } from 'react-icons/gr';
+import resumeData from '../constants/resumeData';
 
 const Resume = () => {
     return (
         <MainLayout>
             <StyledResume>
-                <a className="download" href="https://docs.google.com/document/d/1uSHgQeg8Id1kge3iiurGVI6qTISplFS9z3LLT4n_BrM/edit?usp=sharing" target="_blank" rel="noopener noreferrer"><GrCloudDownload className="icon" /> Download</a>
-                <h1>Emmanuel Yusuf</h1>
-                <p>Frontend Developer</p>
+                <a className="download" href={resumeData.resumeLink} target="_blank" rel="noopener noreferrer"><GrCloudDownload className="icon" /> Download</a>
+                <h1>{resumeData.name}</h1>
+                <p>{resumeData.position}</p>
 
-                <div className="textContent">
-                Years of experience working emphasizing on creating a better interface for the user, implementing a pixel perfect design and 
-                meeting business needs. Giving the user the comfort and best experience they deserve is what I do.
-                </div>
+                <div className="textContent">{resumeData.headline}</div>
 
                 <div className="title">
-                    Skill   . . . . . . . . . . . . . . . . . . . . .
+                    Skills
                 </div>
 
-                <div className="textContent">
-                    Html, Css, Javascript, React, Redux, Styled-components, Nextjs, Gatsby, Gsap, Context api, Sass, Bootstrap, GraphQl, TailwindCss
-                </div>
+                <div className="textContent">{resumeData && resumeData.skills && resumeData.skills.join(", ")}</div>
 
                 {/* Start Experience */}
                 <div className="title">
-                    Experience . . . . . . . . . . . . . . . . . . . . . 
-                </div>
-                
-                <div className="heading">
-                    Perxels Design School - Frontend Developer
-                </div>
-                <div className="subHeading">
-                    April 2021 - Present
-                </div>
-                <div className="textContent">
-                    I worked with designers to covert ready-made UIs into usable code <br />
-
-                    <ul>
-                        <li>Converted Figma UI designs into pixel-perfect web implementation.</li>
-                        <li>Worked closely with designers to deliver pixel-perfect UIs with responsive web design principles.</li>
-                        <li>Made use of tools like Trello for task management and feedback.</li>
-                    </ul>
+                    Experience
                 </div>
 
-                {/* Studione */}
-                <div className="heading">
-                    Studione Digital Agency - Frontend Developer
-                </div>
-                <div className="subHeading">
-                    June 2020 - November 2020
-                </div>
-                <div className="textContent">
-                    I worked with a team of a backend developers to create usable web pages for startups <br />
+                {
+                    resumeData.experience.map((experience, index) => (
+                        <div key={index}>
+                            <div className="heading">
+                                {experience.company} - {experience.position}
+                            </div>
+                            <div className="subHeading">
+                                {experience.startDate} - {experience.endDate}
+                            </div>
+                            <div className="textContent">
+                                {experience.description && (
+                                    <>
+                                        {experience.description} <br />
+                                    </>
+                                )}
 
-                    <ul>
-                        <li>Converted Figma UI designs into pixel-perfect web implementation.</li>
-                        <li>Worked closely with designers to deliver pixel-perfect UIs with responsive web design principles.</li>
-                        <li>Working with backend developers by consuming restful API's</li>
-                    </ul>
-                </div>
+                                <ul>
+                                    {experience.responsibilities.map((responsibility, index) => (
+                                        <li key={index}>{responsibility}</li>
+                                    ))}
+                                </ul>
+                            </div>
+                        </div>
+                    ))
+                }
 
-                <div className="heading">
-                    Hng Internship - Frontend Developer (Intern)
-                </div>
-                <div className="subHeading">
-                    May 2020 - July 2020
-                </div>
-                <div className="textContent">
-                    I contributed to developing user interfaces for quite a several products within three months while learning new skills.
-
-                    <ul>
-                        <li>Worked with a team of frontend developers to create envanto element templates</li>
-                        <li>Work with backend developers to create projects based on tasks given.</li>
-                    </ul>
-                </div>
                 {/* End Experience */}
 
                 {/* Work */}
                 <div className="title">
-                    Projects   . . . . . . . . . . . . . . . . . . . . .
+                    Projects
                 </div>
 
                 <div className="textContent">
@@ -111,11 +86,12 @@ const StyledResume = Styled.div`
     }
 
     a.download {
-        position: absolute;
+        position: sticky;
         top: 2rem;
         right: 1rem;
         display: flex;
         align-items: center;
+        justify-content: flex-end;
         font-size: 1.1rem;
         color: #fff;
         font-weight: 600;
@@ -189,8 +165,9 @@ const StyledResume = Styled.div`
         font-size: 1.15rem;
         color: rgba(255, 255, 255);
         font-weight: 400;
-        max-width: 500px;
+        padding: 0.5rem 0;
         margin-top: 1.8rem;
+        border-bottom: 1px solid rgba(255, 255, 255, .2);
     }
 
     .heading {

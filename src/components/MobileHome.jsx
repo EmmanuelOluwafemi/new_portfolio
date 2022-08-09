@@ -11,16 +11,14 @@ import { FaLinkedin } from 'react-icons/fa';
 
 // images
 import avatar from '../assets/icons/avatar.png';
+import userDetails from '../constants/userDetails';
 
 const MobileHome = ({ isMobile }) => {
     return (
         <StyledMobile className={isMobile ? 'isMobile' : ''}>
-            <h4><span>Hello,</span> I’m <br /> Emmanuel Yusuf. </h4>
+            <h4><span>Hello,</span> I’m <br /> {userDetails.name}. </h4>
             <p>
-                Frontend Developer with a demonstrated history of working in the design industry. 
-                Skilled in React Js, Javascript, Html, CSS, Redux, Firebase, NextJs and Figma. 
-                With a keen interest in the User interface and creating User a better experience 
-                for the user.
+                {userDetails.headline}
             </p>
 
             <Link className="cta" to="/contact">Let's Talk</Link>
@@ -30,9 +28,9 @@ const MobileHome = ({ isMobile }) => {
                     <img src={avatar} alt="my face" />
                 </div>
                 <div className="links">
-                    <a href="https://github.com/EmmanuelOluwafemi"><FaGithub className="icons" /> Github</a>
-                    <a href="https://twitter.com/emaz4me"><FaTwitter className="icons" /> Twitter</a>
-                    <a href="https://www.linkedin.com/in/yusuf-emmanuel-b897b1168/"><FaLinkedin className="icons" /> Linkedin</a>
+                    <a href={userDetails.github}><FaGithub className="icons" /> Github</a>
+                    <a href={userDetails.twitter}><FaTwitter className="icons" /> Twitter</a>
+                    <a href={userDetails.linkedin}><FaLinkedin className="icons" /> Linkedin</a>
                 </div>
             </div>
         </StyledMobile>

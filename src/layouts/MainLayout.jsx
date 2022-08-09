@@ -14,93 +14,90 @@ import { AiFillProject } from 'react-icons/ai';
 
 // images
 import avatar from '../assets/icons/avatar.png';
+import userDetails from '../constants/userDetails';
 
 const MainLayout = ({ children }) => {
     return (
         <>
-        <StyledLayout>
-            <div className="fixedScreen">
-                <div className="sideNav">
-                    <div className="content">
-                        <NavLink exact activeClassName="activeLink" to="/">
-                            <div className="iconContainer">
-                                <FaHome className="icon" />    
-                            </div>
-                            Home
-                        </NavLink>
-                        <NavLink exact activeClassName="activeLink" to="/resume">
-                            <div className="iconContainer">
-                                <FaBriefcase className="icon" />
-                            </div>
-                            Resume
-                        </NavLink>
-                        <NavLink exact activeClassName="activeLink" to="/contact">
-                            <div className="iconContainer">
-                                <FaMicroblog className="icon" />     
-                            </div>
-                            Contact
-                        </NavLink>
-                    </div>
-                </div>
-
-                <div className="mainContent">
-                    <div className="minContent">
-                        <h1><span>Hello,</span> I’m Emmanuel Yusuf. </h1>
-                        <p>
-                            Frontend Developer with a demonstrated history of working in the design 
-                            industry. Skilled in React Js, Javascript, Html, CSS, Redux, Firebase, 
-                            NextJs and Figma. With a keen interest in the User interface and creating 
-                            User a better experience for the user.
-                        </p>
-
-                        <Link to="/contact">Let's Talk</Link>
+            <StyledLayout>
+                <div className="fixedScreen">
+                    <div className="sideNav">
+                        <div className="content">
+                            <NavLink exact activeClassName="activeLink" to="/">
+                                <div className="iconContainer">
+                                    <FaHome className="icon" />
+                                </div>
+                                Home
+                            </NavLink>
+                            <NavLink exact activeClassName="activeLink" to="/resume">
+                                <div className="iconContainer">
+                                    <FaBriefcase className="icon" />
+                                </div>
+                                Resume
+                            </NavLink>
+                            <NavLink exact activeClassName="activeLink" to="/contact">
+                                <div className="iconContainer">
+                                    <FaMicroblog className="icon" />
+                                </div>
+                                Contact
+                            </NavLink>
+                        </div>
                     </div>
 
-                    <div className="about">
-                        <img src={avatar} alt="my face" />
-                        <a href="https://github.com/EmmanuelOluwafemi"><FaGithub className="icons" /> Github</a>
-                        <a href="https://twitter.com/emaz4me"><FaTwitter className="icons" /> Twitter</a>
-                        <a href="https://www.linkedin.com/in/yusuf-emmanuel-b897b1168/"><FaLinkedin className="icons" /> Linkedin</a>
+                    <div className="mainContent">
+                        <div className="minContent">
+                            <h1><span>Hello,</span> I’m {userDetails.name}.</h1>
+                            <p>
+                                {userDetails.headline}
+                            </p>
+
+                            <Link to="/contact">Let's Talk</Link>
+                        </div>
+
+                        <div className="about">
+                            <img src={avatar} alt="my face" />
+                            <a href={userDetails.github}><FaGithub className="icons" /> Github</a>
+                            <a href={userDetails.twitter}><FaTwitter className="icons" /> Twitter</a>
+                            <a href={userDetails.linkedin}><FaLinkedin className="icons" /> Linkedin</a>
                     </div>
                 </div>
             </div>
             <div className="portfolioContent">
-                { children }
-            </div>
-        </StyledLayout>
-
-        <StyledMobileLayout>
-            <div className="content">
                 {children}
             </div>
+        </StyledLayout>
+        <StyledMobileLayout>
+                <div className="content">
+                    {children}
+                </div>
 
-            <div className="buttomNav">
-            <NavLink exact activeClassName="activeLink" to="/">
-                <div className="iconContainer">
-                    <FaHome className="icon" />    
+                <div className="buttomNav">
+                    <NavLink exact activeClassName="activeLink" to="/">
+                        <div className="iconContainer">
+                            <FaHome className="icon" />
+                        </div>
+                        Home
+                    </NavLink>
+                    <NavLink exact activeClassName="activeLink" to="/work">
+                        <div className="iconContainer">
+                            <AiFillProject className="icon" />
+                        </div>
+                        Projects
+                    </NavLink>
+                    <NavLink exact activeClassName="activeLink" to="/resume">
+                        <div className="iconContainer">
+                            <FaBriefcase className="icon" />
+                        </div>
+                        Resume
+                    </NavLink>
+                    <NavLink exact activeClassName="activeLink" to="/contact">
+                        <div className="iconContainer">
+                            <FaMicroblog className="icon" />
+                        </div>
+                        Contact
+                    </NavLink>
                 </div>
-                Home
-            </NavLink>
-            <NavLink exact activeClassName="activeLink" to="/work">
-                <div className="iconContainer">
-                    <AiFillProject className="icon" />
-                </div>
-                Projects
-            </NavLink>
-            <NavLink exact activeClassName="activeLink" to="/resume">
-                <div className="iconContainer">
-                    <FaBriefcase className="icon" />
-                </div>
-                Resume
-            </NavLink>
-            <NavLink exact activeClassName="activeLink" to="/contact">
-                <div className="iconContainer">
-                    <FaMicroblog className="icon" />     
-                </div>
-                Contact
-            </NavLink>
-            </div>
-        </StyledMobileLayout>
+            </StyledMobileLayout>
         </>
     )
 } 
