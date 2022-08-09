@@ -1,5 +1,3 @@
-## Personal portfolio to showcase my skills and projects.
-
 <!-- Please update value in the {}  -->
 
 <h1 align="center">Personal Portfolio</h1>
