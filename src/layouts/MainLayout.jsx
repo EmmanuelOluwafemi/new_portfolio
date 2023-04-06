@@ -55,7 +55,7 @@ const MainLayout = ({ children }) => {
                         </div>
 
                         <div className="about">
-                            <img src={avatar} alt="my face" />
+                            <img style={{ width: "2.5rem", height: "auto" }} src={avatar} alt="my face" />
                             <a href={userDetails.github}><FaGithub className="icons" /> Github</a>
                             <a href={userDetails.twitter}><FaTwitter className="icons" /> Twitter</a>
                             <a href={userDetails.linkedin}><FaLinkedin className="icons" /> Linkedin</a>
