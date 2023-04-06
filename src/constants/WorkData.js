@@ -1,5 +1,11 @@
 const workData = [
     {
+        title: 'Perxels',
+        tech: 'Next js + Chakra ui + Redux + Typescript',
+        desc: `Perxels design school website that showcases their courses and all other activities`,
+        link: 'https://www.perxels.com/',
+    },
+    {
         title: 'Hopla Careers',
         tech: 'React + Styled-components + Redux',
         desc: `Building a job matching platform that helps recruiters ease the
@@ -36,13 +42,6 @@ const workData = [
         tech: 'React + Styled-components + Gsap',
         desc: 'Designer now Founders landing page',
         link: 'https://dnf-kappa.vercel.app'
-    },
-    {
-        title: 'Movie App',
-        tech: 'React + Context Api + Styled-components',
-        desc: 'An app that shows the list of latest movies, there rating, actors and other informations',
-        link: 'https://slimmovies.netlify.app/',
-        github: 'https://github.com/EmmanuelOluwafemi/movieApp'
     },
 ]
 
